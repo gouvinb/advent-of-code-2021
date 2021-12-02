@@ -11,8 +11,12 @@ internal class SonarSweepTest {
 		assertEquals(2, SonarSweep("1\n1\n2\n1\n2").getIncreasedDepthCount())
 		assertEquals(2, SonarSweep("1\n2\n2\n1\n2").getIncreasedDepthCount())
 
-		assertEquals(7, SonarSweep(javaClass.getResource("/day01/input-sample.txt")?.readText() ?: "").getIncreasedDepthCount())
+		assertEquals(7, SonarSweep(
+			javaClass.getResource("/day01/input-sample.txt")?.readText() ?: ""
+		).getIncreasedDepthCount())
 
-		assertEquals(1448, SonarSweep(javaClass.getResource("/day01/input.txt")?.readText() ?: "").getIncreasedDepthCount())
+		assertEquals(1448, SonarSweep(
+			javaClass.getResource("/day01/input.txt")?.readText() ?: ""
+		).getIncreasedDepthCount())
 	}
 }
