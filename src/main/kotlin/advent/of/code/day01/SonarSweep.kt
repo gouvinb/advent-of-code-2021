@@ -9,4 +9,11 @@ class SonarSweep(input: String) {
 			(lastMeasure!! < measure).also { lastMeasure = measure }
 		}
 	}
+
+	fun getMeasurementLargerThanThePreviousCount(): Int {
+		var lastMeasure = measureList.take(3)
+		return measureList.windowed(3).count { measureGroup ->
+			(lastMeasure.sum() < measureGroup.sum()).also { lastMeasure = measureGroup }
+		}
+	}
 }

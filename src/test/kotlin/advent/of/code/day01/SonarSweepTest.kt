@@ -19,4 +19,21 @@ internal class SonarSweepTest {
 			javaClass.getResource("/day01/input.txt")?.readText() ?: ""
 		).getIncreasedDepthCount())
 	}
+
+	@Test
+	fun getMeasurementLargerThanThePreviousCount() {
+		assertEquals(0, SonarSweep("1\n1\n1\n1\n1").getMeasurementLargerThanThePreviousCount())
+		assertEquals(1, SonarSweep("1\n1\n1\n1\n2").getMeasurementLargerThanThePreviousCount())
+		assertEquals(1, SonarSweep("1\n1\n2\n1\n2").getMeasurementLargerThanThePreviousCount())
+		assertEquals(0, SonarSweep("1\n2\n2\n1\n2").getMeasurementLargerThanThePreviousCount())
+		assertEquals(2, SonarSweep("1\n2\n3\n4\n5").getMeasurementLargerThanThePreviousCount())
+
+		assertEquals(5, SonarSweep(
+			javaClass.getResource("/day01/input-sample-2.txt")?.readText() ?: ""
+		).getMeasurementLargerThanThePreviousCount())
+
+		assertEquals(1471, SonarSweep(
+			javaClass.getResource("/day01/input.txt")?.readText() ?: ""
+		).getMeasurementLargerThanThePreviousCount())
+	}
 }
