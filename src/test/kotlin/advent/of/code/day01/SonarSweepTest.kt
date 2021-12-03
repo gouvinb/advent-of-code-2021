@@ -1,5 +1,6 @@
 package advent.of.code.day01
 
+import advent.of.code.readResourceOrEmpty
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
@@ -12,11 +13,11 @@ internal class SonarSweepTest {
 		assertEquals(2, SonarSweep("1\n2\n2\n1\n2").getIncreasedDepthCount())
 
 		assertEquals(7, SonarSweep(
-			javaClass.getResource("/day01/input-sample.txt")?.readText() ?: ""
+			readResourceOrEmpty("/day01/input-sample.txt")
 		).getIncreasedDepthCount())
 
 		assertEquals(1448, SonarSweep(
-			javaClass.getResource("/day01/input.txt")?.readText() ?: ""
+			readResourceOrEmpty("/day01/input.txt")
 		).getIncreasedDepthCount())
 	}
 
@@ -29,11 +30,12 @@ internal class SonarSweepTest {
 		assertEquals(2, SonarSweep("1\n2\n3\n4\n5").getMeasurementLargerThanThePreviousCount())
 
 		assertEquals(5, SonarSweep(
-			javaClass.getResource("/day01/input-sample-2.txt")?.readText() ?: ""
+			readResourceOrEmpty("/day01/input-sample-2.txt")
 		).getMeasurementLargerThanThePreviousCount())
 
 		assertEquals(1471, SonarSweep(
-			javaClass.getResource("/day01/input.txt")?.readText() ?: ""
+			readResourceOrEmpty("/day01/input.txt")
 		).getMeasurementLargerThanThePreviousCount())
 	}
+
 }
