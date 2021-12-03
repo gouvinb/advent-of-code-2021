@@ -14,4 +14,6 @@ class Dive(input: String) {
 	}
 
 	fun calculateHorizontalPositionAndDepth() = submarineCommandList.multipliesHorizontalByDepth()
+
+	fun calculateHorizontalPositionAndDepthWithAim() = submarineCommandList.multipliesHorizontalByDepthWithAim()
 }
