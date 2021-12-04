@@ -14,4 +14,10 @@ internal class BinaryDiagnosticTest {
 		assertEquals(198, sampleCase.calculatePowerConsumption())
 		assertEquals(4174964, case.calculatePowerConsumption())
 	}
+
+	@Test
+	fun calculateRating() {
+		assertEquals(230, sampleCase.calculateRating())
+		assertEquals(4474944, case.calculateRating())
+	}
 }
