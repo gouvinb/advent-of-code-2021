@@ -12,8 +12,16 @@ class HydrothermalVenture(input: String) {
 			}
 	}
 
-	fun getIntersectionsNumber() = lines
+	fun getHorizontalAndVerticalIntersectionsNumber() = lines
 		.filter { it.isHorizontal() || it.isVertical() }
+		.flatMap { it.getPointSequence() }
+		.groupingBy { it }
+		.eachCount()
+		.values
+		.count { it >= 2 }
+
+	fun getDiagonalIntersectionsNumber() = lines
+		.filter { it.isDiagonal() }
 		.flatMap { it.getPointSequence() }
 		.groupingBy { it }
 		.eachCount()

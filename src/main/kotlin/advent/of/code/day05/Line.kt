@@ -8,12 +8,14 @@ data class Line(val start: Position, val end: Position) {
 	fun isHorizontal() = start.x == end.x
 	fun isVertical() = start.y == end.y
 
-	fun getPointSequence() = sequence {
+	fun isDiagonal() = (end.x - start.x).absoluteValue == (end.y - start.y).absoluteValue
+
+	fun getPointSequence() = mutableListOf<Position>().apply {
 		val xOffset = end.x - start.x
 		val yOffset = end.y - start.y
 
 		(0..max(xOffset.absoluteValue, yOffset.absoluteValue)).forEach { s ->
-			yield(Position(start.x + s * xOffset.sign, start.y + s * yOffset.sign))
+			add(Position(start.x + s * xOffset.sign, start.y + s * yOffset.sign))
 		}
 	}
 }

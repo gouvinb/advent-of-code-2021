@@ -9,8 +9,14 @@ internal class HydrothermalVentureTest {
 	private val case = HydrothermalVenture(readResourceOrEmpty("/day05/input.txt"))
 
 	@Test
-	fun getIntersectionsNumber() {
-		assertEquals(5, sampleCase.getIntersectionsNumber())
-		assertEquals(6189, case.getIntersectionsNumber())
+	fun getHorizontalAndVerticalIntersectionsNumber() {
+		assertEquals(5, sampleCase.getHorizontalAndVerticalIntersectionsNumber())
+		assertEquals(6189, case.getHorizontalAndVerticalIntersectionsNumber())
+	}
+
+	@Test
+	fun getDiagonalIntersectionsNumber() {
+		assertEquals(4, sampleCase.getDiagonalIntersectionsNumber())
+		assertEquals(5556, case.getDiagonalIntersectionsNumber())
 	}
 }
