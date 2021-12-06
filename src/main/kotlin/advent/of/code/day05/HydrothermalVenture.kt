@@ -21,7 +21,7 @@ class HydrothermalVenture(input: String) {
 		.count { it >= 2 }
 
 	fun getDiagonalIntersectionsNumber() = lines
-		.filter { it.isDiagonal() }
+		.filter { it.isHorizontal() || it.isVertical() || it.isDiagonal() }
 		.flatMap { it.getPointSequence() }
 		.groupingBy { it }
 		.eachCount()

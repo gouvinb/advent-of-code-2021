@@ -16,7 +16,7 @@ internal class HydrothermalVentureTest {
 
 	@Test
 	fun getDiagonalIntersectionsNumber() {
-		assertEquals(4, sampleCase.getDiagonalIntersectionsNumber())
-		assertEquals(5556, case.getDiagonalIntersectionsNumber())
+		assertEquals(12, sampleCase.getDiagonalIntersectionsNumber())
+		assertEquals(19164, case.getDiagonalIntersectionsNumber())
 	}
 }
