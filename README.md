@@ -1,4 +1,8 @@
-# Advent of Code 2021 in ![Kotlin](https://img.shields.io/badge/Kotlin-white?logo=Kotlin)
+# Advent of Code 2021 in Kotlin
+
+![](https://img.shields.io/badge/Intellij-24292f?logo=JetBrains)
+![](https://img.shields.io/badge/Kotlin-24292f?logo=Kotlin)
+![](https://img.shields.io/badge/Gradle-24292f?logo=Gradle)
 
 ![](https://img.shields.io/badge/⭐%20stars-8-yellow)
 ![](https://img.shields.io/badge/📅%20days-4-blue)
