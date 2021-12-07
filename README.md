@@ -4,8 +4,8 @@
 ![](https://img.shields.io/badge/Kotlin-24292f?logo=Kotlin)
 ![](https://img.shields.io/badge/Gradle-24292f?logo=Gradle)
 
-![](https://img.shields.io/badge/⭐%20stars-10-yellow)
-![](https://img.shields.io/badge/📅%20days-5-blue)
+![](https://img.shields.io/badge/⭐%20stars-12-yellow)
+![](https://img.shields.io/badge/📅%20days-6-blue)
 
 ![example workflow](https://github.com/gouvinb/advent-of-code-2021/actions/workflows/gradle-build-push.yml/badge.svg)
 
